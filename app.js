@@ -3,7 +3,7 @@ term.open(document.getElementById("terminal"));
 
 let buffer = "";
 
-// 🔑 AI KEY (غير للتجربة)
+// 🔑
 const API_KEY = "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";
 
 // 👤 LOGIN SYSTEM
@@ -26,7 +26,7 @@ let fs = {
 let users = ["root"];
 
 // ================= START =================
-term.write("Welcome to AI Terminal 🔥\r\n");
+term.write("Welcome to Terminal 🔥\r\n");
 term.write("Enter username: ");
 
 // ================= INPUT =================
@@ -44,7 +44,7 @@ term.onData(async (key) => {
       users.push(username);
 
       term.write(`Welcome ${username} 🔥\r\n`);
-      term.write(`${username}@ai-terminal:~$ `);
+      term.write(`${username}@a-terminal:~$ `);
 
       buffer = "";
       return;
@@ -53,7 +53,7 @@ term.onData(async (key) => {
     await handle(buffer.trim());
     buffer = "";
 
-    term.write(`\r\n${username}@ai-terminal:~$ `);
+    term.write(`\r\n${username}@a-terminal:~$ `);
 
   } else {
     buffer += key;
@@ -76,7 +76,6 @@ deluser   - delete user
 clear     - clear screen
 help      - show help
 
-🚨 rm -rf / is blocked
 
 Instagram: @siir_pirex
 `);
@@ -166,7 +165,7 @@ User: ${username}
     term.write(data.choices[0].message.content);
 
   } catch (e) {
-    term.write("AI error ❌");
+    term.write("error ❌");
   }
 }
 

@@ -26,7 +26,7 @@ let fs = {
 let users = ["root"];
 
 // ================= START =================
-term.write("Welcome to Terminal 🔥\r\n");
+term.write("Welcome to Terminal \r\n");
 term.write("Enter username: ");
 
 // ================= INPUT =================
